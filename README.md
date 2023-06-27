@@ -1,5 +1,5 @@
 # Loader & Website Injection Base
-This project was a personal endeavor that I started a few weekends ago just for fun. It is still in an unfinished state and serves primarily as a foundation for teaching purposes, rather than being a fully polished product intended for the market. Nonetheless, it remains interesting because it involves a unique website injection process.
+This project was initiated a few weeks ago as a weekend project. It involves a website injection concept that incorporates a login system through client and website communication. The project is noticeably unfinished, as evident from the code. However, I won't be sharing the completed version of the project, which is why I am uploading the unfinished base on GitHub. I believe that such a concept has not been seen on this platform before.
 
 # Setup
 
