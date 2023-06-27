@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vice.priv</title>
+  <style>
+ 
+  
+    body {
+      background-color: rgba(52, 53, 65, 1);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .loading-container {
+      text-align: center;
+    }
+    .zeilenabstand {
+  line-height: 1.5;
+}
+
+   
+    .loading-button {
+      background-color: #ff0000;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .loading-button:hover {
+      background-color: #cc0000;
+    }
+
+    .loading-circle {
+      border: 8px solid rgba(255, 255, 255, 0.3);
+      border-top: 8px solid #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+      margin-top: 20px;
+      display: none;
+    }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+    #embedContainer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(blurred_background.jpg) no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(10px);
+      z-index: 999;
+    }
+
+    #embedContainer > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    #embedContainer h3,
+    #embedContainer p {
+      color: #fff;
+    }
+
+    #embedContainer button {
+      background-color: #ff0000;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+    
+    
+    
+    
+    
+  <div class="container">
+    <div class="logo">
+      <img src="IMG_9771121221.png" alt="Vice.priv">
+    </div>
+    <div class="loading-container">
+      <h2 class="loading-text">Welcome Back, User</h2>
+      <p>Test now the new Web Based Injection out.</p>
+      <button class="loading-button" onclick="loadEmbed()">Load Client</button>
+    </div>
+    <div onload="updateEmbed()">
+   <div id="embedContainer">
+    <div>
+      <h3>Rainbow Six: Siege</h3>
+      <p id="embedDescription">Press Start to begin.</p>
+      <div style="display: flex; justify-content: flex-end;">
+        <button id="Start" class="loading-button" onclick="Download0x0001()">Start</button>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+    </div>
+
+  <script>
+  
+
+
+  
+    function loadEmbed() {
+     
+      document.getElementById("embedContainer").style.display = "block";
+    }
+
+    function closeEmbed() {
+      document.getElementById("embedContainer").style.display = "none";
+    }
+
+  function startDownload() {
+            // Direkter Download der Datei
+            window.location.href = "download/siresware.exe";
+}
+
+
+
+    
+
+function Download0x0001() {
+    var button = document.getElementById("Start");
+  button.parentNode.removeChild(button);
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Downloading the Client. Please move the Client into your Rainbow Six: Siege Game Folder and start it as an Adminstrator.";
+    startDownload();
+}
+
+function startDownload() {
+    downloadButton.setAttribute('href', 'download/siresware.exe');
+    downloadButton.click();
+    setInterval(checkTextChange, 5000);
+}
+
+function checkTextChange() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'command.php', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = xhr.responseText;
+            if (response === "Dx0001") {
+    changeTextTo("Yx0001");
+    updateEmbedDescription("Connected with the Client.");
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Connected with the Client.";
+}
+
+
+
+if (response === "Dx0002") {
+  var description = document.getElementById("embedDescription");
+  description.innerHTML = "Please enter your License.<br>Press enter to continue.";
+
+  var licenseInput = document.createElement("input");
+  licenseInput.setAttribute("type", "text");
+  licenseInput.setAttribute("id", "licenseInput");
+  description.appendChild(document.createElement("br"));
+  description.appendChild(licenseInput);
+
+  licenseInput.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      processLicense();
+    }
+  });
+}
+
+
+
+
+if (response === "Dx0003") {
+    changeTextTo("Yx0003");
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Starting the Game RainbowSix.";
+}
+
+if (response === "Dx0004") {
+    changeTextTo("Yx0004");
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Game Found. Injecting.";
+}
+
+if (response === "Dx0005") {
+    changeTextTo("Yx0005");
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Injected successful. You can now close this tab.";
+}
+if (response === "ExFailed") {
+    changeTextTo("0x0001");
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Error Code: Ex00001 Failed to start RainbowSix.exe. You need to place the Loader into your Game's Folder.";
+}
+
+        }
+    };
+    xhr.send();
+}
+
+function changeTextTo(newText) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'change_text.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log('Text erfolgreich geändert');
+        }
+    };
+    xhr.send('text=' + encodeURIComponent(newText));
+}
+
+function processLicense() {
+  var license = document.getElementById("licenseInput").value;
+
+  if (license) {
+    changeTextTo("Lx" + license);
+    var description = document.getElementById("embedDescription");
+    description.innerHTML = "Validating License...";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+         
+          console.log(this.responseText);
+        } else {
+         
+          console.error("Error: " + this.responseText);
+        }
+      }
+    };
+    xhttp.open("POST", "command1.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("text=" + encodeURIComponent("License" + license));
+  } else {
+    alert("Ungültige Lizenz. Bitte versuchen Sie es erneut.");
+  }
+}
+
+
+
+function updateEmbedDescription(newDescription) {
+    embedDescription.textContent = newDescription;
+}
+
+
+setInterval(checkTextChange, 5000);
+    
+    
+  </script>
+</body>
+</html>
